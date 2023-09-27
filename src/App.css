@@ -255,7 +255,7 @@ span.navbar-text {
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  margin-right: 160px;
+  margin-right: 24px;
 }
 .navbar-text button {
   font-weight: 700;
@@ -688,11 +688,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 50px ;
   display: inline-flex;
 }
-.newsletter-bx form{
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin-left: 200px;
+@media (max-width: 768px) {
+  .newsletter-bx form{
+   width: 100%;
+    font-size: 12px;
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 .footer img {
   width: 26%;
