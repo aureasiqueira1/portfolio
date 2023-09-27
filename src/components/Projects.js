@@ -14,35 +14,23 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const projects = [
     {
-      title: "Capputeeno",
-      description: "Design & Development",
-      imgUrl: capputeeno,
-    },
-    {
-      title: "My Contacts",
-      description: "Design & Development",
-      imgUrl: mycontacts,
-    },
-    {
       title: "Kanban",
       description: "Design & Development",
       imgUrl: kanban,
+      url: "https://project-schedule-neon.vercel.app/",
     },
     {
       title: "Financeiro",
       description: "Design & Development",
       imgUrl: financeiro,
+      url: "https://app-financeiro-nu.vercel.app/",
     },
 
     {
       title: "GitHub Search",
       description: "Design & Development",
       imgUrl: githubsearch,
-    },
-    {
-      title: "Quiz",
-      description: "Design & Development",
-      imgUrl: quiz,
+      url: "https://front-end-desafio-eight.vercel.app/",
     },
   ];
 
