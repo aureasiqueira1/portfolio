@@ -687,16 +687,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #121212;
   padding: 50px ;
   display: inline-flex;
+  width: 100%;
 }
-@media (max-width: 768px) {
   .newsletter-bx form{
    width: 100%;
-    font-size: 12px;
     display: block;
     justify-content: flex-start;
     align-items: flex-start;
   }
-}
+
+
 .footer img {
   width: 26%;
 }
