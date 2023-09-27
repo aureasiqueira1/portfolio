@@ -18,12 +18,14 @@ export const Projects = () => {
       description: "Design & Development",
       imgUrl: kanban,
       url: "https://project-schedule-neon.vercel.app/",
+      git: "https://github.com/aureasiqueira1/ProjectSchedule",
     },
     {
       title: "Financeiro",
       description: "Design & Development",
       imgUrl: financeiro,
       url: "https://app-financeiro-nu.vercel.app/",
+      git: "https://github.com/aureasiqueira1/App-financeiro",
     },
 
     {
@@ -31,6 +33,7 @@ export const Projects = () => {
       description: "Design & Development",
       imgUrl: githubsearch,
       url: "https://front-end-desafio-eight.vercel.app/",
+      git: "https://github.com/aureasiqueira1/FrontEndDesafio",
     },
   ];
 
