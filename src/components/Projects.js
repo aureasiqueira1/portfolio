@@ -1,12 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import capputeeno from "../assets/img/capputeeno.png";
-import mycontacts from "../assets/img/mycontacts.png";
 import financeiro from "../assets/img/financeiro.png";
 import kanban from "../assets/img/kanban.png";
 import githubsearch from "../assets/img/githubsearch.png";
 import quiz from "../assets/img/quiz.png";
-
+import mycontacts from "../assets/img/mycontacts.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -27,13 +26,22 @@ export const Projects = () => {
       url: "https://app-financeiro-nu.vercel.app/",
       git: "https://github.com/aureasiqueira1/App-financeiro",
     },
-
     {
       title: "GitHub Search",
       description: "Design & Development",
       imgUrl: githubsearch,
       url: "https://front-end-desafio-eight.vercel.app/",
       git: "https://github.com/aureasiqueira1/FrontEndDesafio",
+    },
+  ];
+
+  const projects2 = [
+    {
+      title: "My Contacts",
+      description: "Development",
+      imgUrl: mycontacts,
+      url: "https://project-my-contacts-p38d43war-aureasiqueira1s-projects.vercel.app/",
+      git: "https://github.com/aureasiqueira1/ProjectMyContacts",
     },
   ];
 
@@ -83,12 +91,14 @@ export const Projects = () => {
                           })}
                         </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="section">
-                        <p></p>
+                      <Tab.Pane eventKey="second">
+                        <Row>
+                          {projects2.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <p></p>
-                      </Tab.Pane>
+                      <Tab.Pane eventKey="third"></Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
                 </div>
