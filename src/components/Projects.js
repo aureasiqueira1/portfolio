@@ -40,7 +40,7 @@ export const Projects = () => {
       title: "My Contacts",
       description: "Development",
       imgUrl: mycontacts,
-      url: "https://project-my-contacts-p38d43war-aureasiqueira1s-projects.vercel.app/",
+      url: "https://project-my-contacts.vercel.app/",
       git: "https://github.com/aureasiqueira1/ProjectMyContacts",
     },
   ];
