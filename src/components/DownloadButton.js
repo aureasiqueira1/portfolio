@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineDownload } from "react-icons/ai";
-import pdf from "../public/Currículo_Áurea.pdf";
+import pdf from "../public/Currículo-ÁureaRibeiro.pdf";
 
 const DownloadButton = () => {
   const handleDownloadClick = () => {
@@ -11,7 +11,7 @@ const DownloadButton = () => {
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.target = "_blank";
-    link.download = "Currículo_Áurea.pdf"; // Defina o nome do arquivo como desejar
+    link.download = "Currículo-ÁureaRibeiro.pdf"; // Defina o nome do arquivo como desejar
 
     // Simula um clique no link para iniciar o download
     link.click();
