@@ -4,6 +4,7 @@ import capputeeno from "../assets/img/capputeeno.png";
 import financeiro from "../assets/img/financeiro.png";
 import kanban from "../assets/img/kanban.png";
 import githubsearch from "../assets/img/githubsearch.png";
+import shoppingcart from "../assets/img/shoppingcart.png";
 import quiz from "../assets/img/quiz.png";
 import mycontacts from "../assets/img/mycontacts.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -12,6 +13,13 @@ import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const projects = [
+    {
+      title: "Shopping",
+      description: "Development",
+      imgUrl: shoppingcart,
+      url: "https://shopping-umber.vercel.app/",
+      git: "https://github.com/aureasiqueira1/Shopping",
+    },
     {
       title: "Kanban",
       description: "Design & Development",
@@ -26,6 +34,9 @@ export const Projects = () => {
       url: "https://app-financeiro-nu.vercel.app/",
       git: "https://github.com/aureasiqueira1/App-financeiro",
     },
+  ];
+
+  const projects2 = [
     {
       title: "GitHub Search",
       description: "Design & Development",
@@ -33,9 +44,6 @@ export const Projects = () => {
       url: "https://front-end-desafio-eight.vercel.app/",
       git: "https://github.com/aureasiqueira1/FrontEndDesafio",
     },
-  ];
-
-  const projects2 = [
     {
       title: "My Contacts",
       description: "Development",

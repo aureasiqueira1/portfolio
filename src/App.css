@@ -186,11 +186,7 @@ span.navbar-text {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 15px;
-  background: linear-gradient(
-    90.21deg,
-    rgba(170, 54, 124, 0.5) -5.91%,
-    rgba(74, 47, 189, 0.5) 111.58%
-  );
+  background: linear-gradient(90.21deg, rgba(241, 88, 180, 0.5) -5.91%, rgba(125, 95, 255, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -207,6 +203,7 @@ span.navbar-text {
 }
 .curriculo:hover{
   cursor: pointer;
+  background: linear-gradient(90.21deg, #79054a -5.91%, #100057 111.58%);
 }
 .footer-social-icon a {
   width: 42px;
@@ -545,7 +542,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(90.21deg, rgba(241, 88, 180, 0.5) -5.91%, rgba(125, 95, 255, 0.5) 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -724,8 +721,8 @@ padding: 5px 30px;
 .newsletter-bx {
   background: linear-gradient(
     90.21deg,
-    rgba(170, 54, 124, 0.5) -5.91%,
-    rgba(74, 47, 189, 0.5) 111.58%
+    rgba(241, 88, 180, 0.5) -5.91%,
+    rgba(125, 95, 255, 0.5) 111.58%
   ); 
   border-radius: 55px;
   color: #121212;
@@ -734,15 +731,16 @@ padding: 5px 30px;
   width: 100%;
 }
   .newsletter-bx form{
-   width: 100%;
-    display: block;
     justify-content: flex-start;
     align-items: flex-start;
+    text-align: flex-start; 
+    margin-top: 20px;
+    margin-left: 30px;
   }
 
 
 .footer img {
-  width: 26%;
+  width: 24%;
 }
 .footer p {
   font-weight: 400;
