@@ -8,7 +8,6 @@ import {
   AiOutlineGithub,
   AiFillLinkedin,
 } from "react-icons/ai";
-import DownloadButton from "./DownloadButton";
 export const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState("");
 
@@ -37,7 +36,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
             <img className="perfil" src={perfil} alt="Logo" />
 
             <form onSubmit={handleSubmit}>
-              <div className="contact-title">CONTATOS</div>
+              <div className="contact-title">CONTATO</div>
 
               <div className="icon-label">
                 <a href="https://www.linkedin.com/in/aureasiqueira/">
@@ -70,7 +69,6 @@ export const Newsletter = ({ status, message, onValidated }) => {
           </div>
         </Col>
       </section>
-      <DownloadButton />
     </>
   );
 };

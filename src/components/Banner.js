@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import DownloadButton from "./DownloadButton";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -10,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const toRotate = ["Desenvolvedora FrontEnd"];
-  const period = 2000;
+  const period = 100;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -41,7 +42,7 @@ export const Banner = () => {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(100);
     }
   };
 
@@ -58,8 +59,6 @@ export const Banner = () => {
                       isVisible ? "animate__animated animate__fadeIn" : ""
                     }
                   >
-                    <span className="tagline">Bem vindo ao meu Portfólio</span>
-
                     <h1>
                       {`Olá! Eu sou a Áurea`}{" "}
                       <span
@@ -70,13 +69,17 @@ export const Banner = () => {
                         <span className="wrap">{text}</span>
                       </span>
                     </h1>
+
                     <p>
-                      Sou formada em Engenharia da Computação pelo Inatel desde
-                      Dezembro de 2022. <br></br> Trabalho com desenvolvimento
-                      de software utilizando React desde Agosto de 2021.{" "}
-                      <br></br>
-                      Atualmente sou desenvolvedora FrontEnd Junior.
+                      Sou formada em Engenharia da Computação. <br></br>
+                      Tenho experiência há mais de 2 anos trabalhando com
+                      desenvolvimento de software utilizando React, JavaScript,
+                      HTML, CSS, Styled Components, Testes unitários, Figma,
+                      Github, Scrum e kanban. Atualmente sou desenvolvedora
+                      front-end Junior.
                     </p>
+
+                    <DownloadButton />
                   </div>
                 )}
               </TrackVisibility>

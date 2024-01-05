@@ -70,7 +70,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("footer")}
               >
-                Contatos
+                Contato
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

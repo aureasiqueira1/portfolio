@@ -64,7 +64,7 @@ a:hover {
 
 img {
   width: 100%;
-  height: 300px;
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,13 +188,15 @@ span.navbar-text {
   padding: 15px;
   background: linear-gradient(90.21deg, rgba(241, 88, 180, 0.5) -5.91%, rgba(125, 95, 255, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 16px;
   border-radius: 20px;
-  width: 400px ;
+  width: 300px ;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin-left: 10%;
 }
 .curriculo svg{
   width: 32px;
@@ -336,8 +338,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: 0;
-  padding: 300px 0 100px 0;
+  padding: 80px 0 100px 0;
   background-image: url("./assets/img/banner-bg.png");
   background-position: top center;
   background-size: cover;
@@ -359,11 +360,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 20px;
 }
 .banner h1 {
-  font-size: 65px;
+  font-size: 42px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: block;
 }
 .banner p {
@@ -372,6 +373,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+  margin-bottom: 30px;
 }
 .banner button {
   color: #fff;
@@ -415,15 +417,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-bx {
-  background: #151515;
-  border-radius: 64px;
+  background: #000000;
+  border-radius: 50px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
+  border: 10px dashed #b97bff !important;
+  border-style: dashed;
 }
 .skill h2 {
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 35px;
+  font-weight: 550;
 }
 .skill p {
   color: #b8b8b8;
@@ -438,7 +442,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-slider .item img {
-  width: 50%;
+  width: 40%;
   margin: 0 auto 15px auto;
 }
 .background-image-left {
@@ -451,12 +455,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project {
-  padding: 80px 0;
   position: relative;
-  background-color: black;
+  margin: 30px 110px;
+  justify-content: center;
+  background: #000000;
+  border-radius: 50px;
+  padding: 60px 50px;
+  border: 10px dashed #b97bff !important;
 }
 .project h2 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   text-align: center;
 }
@@ -575,11 +583,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.1em;
   color: #ffffff;
   margin-top: 24px;
-border: 2px solid #ffffff;
-cursor: pointer;
-border-radius: 10px;
-padding: 5px 30px;
-  
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 30px;
 }
 .proj-open{
   font-style: italic;
@@ -709,26 +716,30 @@ padding: 5px 30px;
 }
 
 /************ Footer Css ************/
+.align-items-center{
+  width: 85%;
+}
+
 .footer {
   padding: 0 0 50px 0;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.row{
+  position: relative;
+  margin: 30px 110px;
+  justify-content: center;
   padding: 0px;
+  letter-spacing: 0.8px;
+  background: linear-gradient(90.21deg, rgba(241, 88, 180, 0.5) -5.91%, rgba(125, 95, 255, 0.5) 111.58%);
+  border: 5px solid rgb(255, 255, 255);
+  font-size: 18px;
+  border-radius: 20px;
 }
 .newsletter-bx {
-  background: linear-gradient(
-    90.21deg,
-    rgba(241, 88, 180, 0.5) -5.91%,
-    rgba(125, 95, 255, 0.5) 111.58%
-  ); 
-  border-radius: 55px;
-  color: #121212;
   padding: 50px ;
   display: inline-flex;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
   .newsletter-bx form{
     justify-content: flex-start;

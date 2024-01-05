@@ -41,27 +41,23 @@ export const Skills = () => {
               >
                 <div className="item">
                   <img src={meter1} alt="Image" />
-                  <h5>React</h5>
+                  <h5>React / Next.js</h5>
                 </div>
                 <div className="item">
                   <img src={meter1} alt="Image" />
-                  <h5>Next.js</h5>
+                  <h5>JavaScript / TypeScript</h5>
                 </div>
                 <div className="item">
                   <img src={meter1} alt="Image" />
-                  <h5>JavaScript/TypeScript</h5>
+                  <h5>HTML / CSS</h5>
                 </div>
                 <div className="item">
                   <img src={meter1} alt="Image" />
-                  <h5>HTML/CSS</h5>
+                  <h5>Jest</h5>
                 </div>
                 <div className="item">
                   <img src={meter1} alt="Image" />
-                  <h5>Testes Unitários</h5>
-                </div>
-                <div className="item">
-                  <img src={meter3} alt="Image" />
-                  <h5>GitHub</h5>
+                  <h5>Git / Github</h5>
                 </div>
                 <div className="item">
                   <img src={meter3} alt="Image" />
@@ -69,15 +65,15 @@ export const Skills = () => {
                 </div>
                 <div className="item">
                   <img src={meter3} alt="Image" />
-                  <h5>PostgreSQL/MySQL</h5>
+                  <h5>NodeJS</h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="Image" />
+                  <h5>Scrum / kanban</h5>
                 </div>
                 <div className="item">
                   <img src={meter2} alt="Image" />
-                  <h5>GraphQL</h5>
-                </div>
-                <div className="item">
-                  <img src={meter2} alt="Image" />
-                  <h5>Docker</h5>
+                  <h5>SQL</h5>
                 </div>
               </Carousel>
             </div>
