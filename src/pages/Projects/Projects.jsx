@@ -264,6 +264,7 @@ function Card({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
+    
    <div
       ref={container}
       className="h-screen flex items-center justify-center sticky top-10 project-container"
@@ -281,115 +282,116 @@ function Card({
           transition: { duration: 0.3 },
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-gradient-x"></div>
-        <div className="p-[2px] rounded-xl bg-gradient-to-r from-[#FF6B00] via-[#FF2EB1] to-[#3B82F6] animate-gradient-x">
-          <div className="bg-zinc-900 rounded-[10px] p-6 text-white">
-            <p className="text-sm text-gray-300 ">               
-              {/* Modern split card design */}
-              <div className="w-full flex flex-col md:flex-row bg-zinc-700 rounded-2xl overflow-hidden shadow-xl">
-                {/* Image section - full width on mobile, 55% on desktop */}
-                <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden flex items-center justify-center">
-                  <motion.img
-                    src={url}
-                    alt={title}
-                    initial={{ scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.4 }}
-                  />
-                </div>
-
-                {/* Content section - full width on mobile, 45% on desktop */}
-                <div className="w-full md:w-[45%] p-2 md:p-2 lg:p-10 flex flex-col justify-between">
-                  <div className="mb-6">
-                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4"> 
-                      {title}
-                    </h2>
-                    <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md">
-                      {description}
-                    </p>
+        <div className="p-[2px] rounded-lg bg-gradient-to-r from-[#FF6B00] via-[#FF2EB1] to-[#3B82F6] animate-gradient-x inline-block">
+          <div className="p-[2px] rounded-xl bg-gradient-to-r from-[#FF6B00] via-[#FF2EB1] to-[#3B82F6] animate-gradient-x">
+            <div className="bg-zinc-900 rounded-[10px] p-4 text-white">
+                {/* Modern split card design */}
+                <div className="w-full flex flex-col md:flex-row bg-zinc-700 rounded-2xl overflow-hidden shadow-xl">
+                  {/* Image section - full width on mobile, 55% on desktop */}
+                  <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden flex items-center justify-center">
+                    <motion.img
+                      src={url}
+                      alt={title}
+                      initial={{ scale: 1 }}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.4 }}
+                    />
                   </div>
 
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {techs?.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 text-sm rounded-lg bg-gray-800 text-white border border-gray-600 shadow-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                  {/* Content section - full width on mobile, 45% on desktop */}
+                  <div className="w-full md:w-[45%] p-2 md:p-2 lg:p-10 flex flex-col justify-between">
+                    <div className="mb-6">
+                      <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4"> 
+                        {title}
+                      </h2>
+                      <p className="text-sm md:text-base text-gray-100 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md">
+                        {description}
+                      </p>
+                    </div>
 
-                  <div className="mt-4 md:mt-auto pt-2">
-                    <div className="w-full h-[5px] bg-gray-800 mb-4 md:mb-4" />
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {techs?.map((tech, index) => (
+                        <div className="p-[2px] rounded-lg bg-gradient-to-r from-[#FF6B00] via-[#FF2EB1] to-[#3B82F6] animate-gradient-x inline-block">
+                          <span
+                            key={index}
+                            className="px-3 py-1 text-sm rounded-lg bg-gray-800 text-white shadow-sm block"
+                          >
+                            {tech}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
 
-                    <div className="flex items-center gap-8">
-                      {/* GitHub Link */}
-                      <motion.a
-                        href={githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex items-center gap-2"
-                        whileHover={{ y: -3 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke={color}
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        <span
-                          className="text-xs md:text-sm font-medium"
-                          style={{ color }}
-                        >
-                          Code
-                        </span>
-                      </motion.a>
+                    <div className="mt-4 md:mt-auto pt-2">
+                      <div className="w-full h-[3px] bg-gradient-to-r from-[#FF6B00] via-[#FF2EB1] to-[#3B82F6] animate-gradient-x mb-4 md:mb-4" />
 
-                      {/* Live Link */}
-                      <motion.a
-                        href={liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex items-center gap-2"
-                        whileHover={{ y: -3 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke={color}
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
+                      <div className="flex items-center gap-8">
+                        {/* GitHub Link */}
+                        <motion.a
+                          href={githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center gap-2"
+                          whileHover={{ y: -3 }}
+                          transition={{ type: "spring", stiffness: 400 }}
                         >
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <line x1="2" y1="12" x2="22" y2="12"></line>
-                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                        <span
-                          className="text-xs md:text-sm font-medium"
-                          style={{ color }}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke={color}
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                          </svg>
+                          <span
+                            className="text-xs md:text-sm font-medium"
+                            style={{ color }}
+                          >
+                            Código
+                          </span>
+                        </motion.a>
+
+                        {/* Live Link */}
+                        <motion.a
+                          href={liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center gap-2"
+                          whileHover={{ y: -3 }}
+                          transition={{ type: "spring", stiffness: 400 }}
                         >
-                          Live
-                        </span>
-                      </motion.a>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke={color}
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                          </svg>
+                          <span
+                            className="text-xs md:text-sm font-medium"
+                            style={{ color }}
+                          >
+                            Ver Projeto
+                          </span>
+                        </motion.a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </p>
           </div>
         </div>
       </motion.div>
