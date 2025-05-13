@@ -281,6 +281,7 @@ function Card({
           transition: { duration: 0.3 },
         }}
       >
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-gradient-x"></div>
         <div className="p-[2px] rounded-xl bg-gradient-to-r from-[#FF6B00] via-[#FF2EB1] to-[#3B82F6] animate-gradient-x">
           <div className="bg-zinc-900 rounded-[10px] p-6 text-white">
             <p className="text-sm text-gray-300 ">               
