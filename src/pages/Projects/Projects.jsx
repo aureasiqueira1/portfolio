@@ -264,23 +264,22 @@ function Card({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div
+   <div
       ref={container}
-      className="h-[85vh] flex items-center justify-center sticky top-20 project-container"
+      className="h-screen flex items-center justify-center sticky top-10 project-container"
     >
       <motion.div
-       style={{
+        style={{
           scale,
-          top: `calc(${i * 3}px)`,
+          top: `calc(-5vh + ${i * 5}px)`,
           transform: `scale(var(--project-scale, 1))`,
-          marginTop: "var(--project-margin, 1)",
-          marginBottom: '70px'
+          marginTop: "var(--project-margin, 0)",
         }}
-        className="relative w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card "
+        className="relative -top-[25%] h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card"
         whileHover={{
-        y: -8,
-        transition: { duration: 0.3 },
-      }}
+          y: -8,
+          transition: { duration: 0.3 },
+        }}
       >
         <div className="p-[2px] rounded-xl bg-gradient-to-r from-[#FF6B00] via-[#FF2EB1] to-[#3B82F6] animate-gradient-x">
           <div className="bg-zinc-900 rounded-[10px] p-6 text-white">
