@@ -48,13 +48,13 @@ Desenvolvido com **React** e **Vite** para garantir performance e modernidade. V
 Clone o repositório:
 
 ```bash
-git clone https://github.com/aureasiqueira1/portfolio2025.git
+git clone https://github.com/aureasiqueira1/portfolio.git
 ```
 
 Acesse o diretório:
 
 ```bash
-cd portfolio2025
+cd portfolio
 ```
 
 Instale as dependências:
