@@ -17,25 +17,25 @@ export default function Contact() {
     let isValid = true;
 
     if (!formData.name.trim()) {
-      tempErrors.name = "Name is required";
+      tempErrors.name = "O nome é obrigatório";
       isValid = false;
     }
 
     if (!formData.email.trim()) {
-      tempErrors.email = "Email is required";
+      tempErrors.email = "O e-mail é obrigatório";
       isValid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      tempErrors.email = "Email is invalid";
+      tempErrors.email = "O e-mail é inválido";
       isValid = false;
     }
 
     if (!formData.subject.trim()) {
-      tempErrors.subject = "Subject is required";
+      tempErrors.subject = "O assunto é obrigatório";
       isValid = false;
     }
 
     if (!formData.message.trim()) {
-      tempErrors.message = "Message is required";
+      tempErrors.message = "A mensagem é obrigatória";
       isValid = false;
     }
 
@@ -47,16 +47,16 @@ export default function Contact() {
     e.preventDefault();
 
     if (!validateForm()) {
-      setStatus("Please fill in all required fields correctly.");
+      setStatus("Por favor, preencha todos os campos obrigatórios corretamente.");
       return;
     }
 
     // Create a new FormData object to send to Web3Forms API
     const form = new FormData();
-    form.append("access_key", "90f4b8af-e590-42b0-beaf-10b18f66a703"); // Replace with your Web3Forms access key
+    form.append("access_key", "9281fc68-987e-4773-af6c-0a72c09ef7bc"); // Replace with your Web3Forms access key
     form.append("name", formData.name);
     form.append("email", formData.email);
-    form.append("subject", formData.subject || "New Contact Form Submission");
+    form.append("subject", formData.subject || "Envio de novo formulário de contato");
     form.append("message", formData.message);
 
     try {
@@ -69,7 +69,7 @@ export default function Contact() {
       const result = await response.json();
 
       if (response.ok) {
-        setStatus("Message sent successfully!");
+        setStatus("Mensagem enviada com sucesso!");
         setFormData({
           name: "",
           email: "",
@@ -78,18 +78,17 @@ export default function Contact() {
         });
         setErrors({});
       } else {
-        setStatus(result.message || "There was an error sending your message.");
+        setStatus(result.message || "Ocorreu um erro ao enviar sua mensagem.");
       }
     } catch (error) {
-      setStatus("An error occurred. Please try again.");
+      setStatus("Ocorreu um erro. Tente novamente.");
       console.error("Error:", error);
     }
   };
 
   return (
     <main
-      className="pt-20 lg:pt-[0rem] bg-[#04081A]
- text-white min-h-screen"
+      className="pt-20 lg:pt-[0rem] bg-[#04081A] text-white min-h-screen"
     >
       <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
@@ -98,10 +97,10 @@ export default function Contact() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                  Get in Touch
+                  Entre em contato
                 </h2>
                 <p className="text-gray-300 text-lg">
-                  Have a question or want to work together? Drop us a message!
+                  Tem alguma dúvida ou gostaria de trabalhar comigo? Envie-me uma mensagem!
                 </p>
               </div>
 
@@ -112,7 +111,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">olovajs@gmail.com</p>
+                    <p className="text-gray-400">aurea@gec.inatel.br</p>
                   </div>
                 </div>
 
@@ -121,8 +120,8 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-pink-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Laxmipure, Natore 6400</p>
+                    <h3 className="font-semibold">Localização</h3>
+                    <p className="text-gray-400">Minas Gerais</p>
                   </div>
                 </div>
               </div>
@@ -135,7 +134,7 @@ export default function Contact() {
                   <div>
                     <input
                       type="text"
-                      placeholder="Your Name"
+                      placeholder="Seu Nome"
                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
                         errors.name ? "border-red-500" : "border-gray-700"
                       } focus:border-blue-500 focus:outline-none transition-colors`}
@@ -152,7 +151,7 @@ export default function Contact() {
                   <div>
                     <input
                       type="email"
-                      placeholder="Your Email"
+                      placeholder="Seu Email"
                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
                         errors.email ? "border-red-500" : "border-gray-700"
                       } focus:border-blue-500 focus:outline-none transition-colors`}
@@ -171,7 +170,7 @@ export default function Contact() {
                   <div>
                     <input
                       type="text"
-                      placeholder="Subject"
+                      placeholder="Assunto"
                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
                         errors.subject ? "border-red-500" : "border-gray-700"
                       } focus:border-blue-500 focus:outline-none transition-colors`}
@@ -189,7 +188,7 @@ export default function Contact() {
 
                   <div>
                     <textarea
-                      placeholder="Your Message"
+                      placeholder="Sua Mensagem"
                       rows="4"
                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
                         errors.message ? "border-red-500" : "border-gray-700"
@@ -211,7 +210,7 @@ export default function Contact() {
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
                 >
-                  <span>Send Message</span>
+                  <span>Enviar</span>
                   <Send className="w-4 h-4" />
                 </button>
               </form>
@@ -220,7 +219,7 @@ export default function Contact() {
               {status && (
                 <div
                   className={`mt-4 text-center ${
-                    status.includes("success")
+                    status.includes("sucesso")
                       ? "text-green-400"
                       : "text-red-400"
                   }`}

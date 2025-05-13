@@ -131,10 +131,6 @@ export default function EnhancedPortfolioCard() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}>
               <div className="flex justify-between items-center">
-                <h2
-                  className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#38BDF8]">
-                  About Me
-                </h2>
                 <Badge
                   variant="secondary"
                   className="flex items-center bg-green-900/20 text-green-400 px-4 py-1 rounded-full text-sm font-medium">

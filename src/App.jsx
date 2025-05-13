@@ -31,10 +31,10 @@ export default function App() {
         <Routes>`
           <Route path="/" element={<Hero />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/experiencia" element={<Experience />} />
+          <Route path="/educacao" element={<Education />} />
+          <Route path="/contato" element={<Contact />} />
+          <Route path="/projetos" element={<Projects />} />
         </Routes>
       )}
     </>

@@ -32,23 +32,23 @@ export default function Header() {
     {
       id: "experience",
       icon: FaBriefcase,
-      text: "Experience",
-      path: "/experience",
+      text: "Experiência",
+      path: "/experiencia",
     },
     {
       id: "education",
       icon: FaGraduationCap,
-      text: "Education",
-      path: "/education",
+      text: "Educação",
+      path: "/educacao",
     },
-    { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
-    { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
+    { id: "projects", icon: FaLaptopCode, text: "Projetos", path: "/projetos" },
+    { id: "contact", icon: FaEnvelope, text: "Contato", path: "/contato" },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/95 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
       <div className="md:fixed md:top-4 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto">
-        <div className="p-[2px] md:rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 animate-gradient-x">
+        <div className="p-[2px] md:rounded-full bg-gradient-to-r from-[#FF6B00] via-[#FF2EB1] to-[#3B82F6] animate-gradient-x">
           <nav className="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">

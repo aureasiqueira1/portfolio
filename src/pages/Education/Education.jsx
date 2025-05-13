@@ -15,25 +15,15 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
-      description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
-    },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
+      degree: "Engenharia da Computação",
+      school: "Instituto Nacional de Telecomunicações (Inatel)",
       mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      year: "2018-2022",
+      achievements: ["CPC (Nota do MEC): 4"],
+      skills: ["Programação Orientada a Objetos", "Algoritmos e Estruturas de Dados", "Sistemas Operacionais", "Banco de Dados", "Redes de Computadores", "Desenvolvimento de Software"],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
-    },
+        "Desenvolveu fortes habilidades analíticas e de resolução de problemas através de um estudo aprofundado em computação, engenharia e ciências exatas, com foco em programação e desenvolvimento de sistemas.",
+    }
   ];
 
   const containerVariants = {
@@ -75,12 +65,8 @@ const EducationSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
-            Educational Journey
+            Graduação
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover how academic excellence shapes innovative thinking and
-            professional growth.
-          </p>
         </motion.div>
 
         <motion.div
@@ -124,10 +110,7 @@ const EducationSection = () => {
                 </p>
 
                 <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-white flex items-center gap-2">
-                    <Trophy className="w-4 h-4 text-yellow-500" />
-                    Key Achievements
-                  </h4>
+                 
                   <div className="flex flex-wrap gap-2">
                     {edu.achievements.map((achievement, i) => (
                       <div
